@@ -277,7 +277,7 @@ if st.button("Solve", type="primary"):
                     # Altair ile Renkli Grafik
                     chart_source = alt.Chart(source_summary).mark_bar().encode(
                         x=alt.X('Source', title='Source Node', sort='-y'),
-                        y=alt.Y('Quantity', title='Toplam Miktar'),
+                        y=alt.Y('Quantity', title='Total Quantity'),
                         color=alt.Color('Source', legend=None),
                         tooltip=['Source', 'Quantity']
                     ).properties(height=300)
@@ -291,9 +291,9 @@ if st.button("Solve", type="primary"):
                         
                         # Altair ile Renkli Grafik
                         chart_target = alt.Chart(target_summary).mark_bar().encode(
-                            x=alt.X('Target', title='Hedef Noktası', sort='-y'),
-                            y=alt.Y('Quantity', title='Toplam Miktar'),
-                            color=alt.Color('Target', legend=None), # <-- İŞTE SİHİR BURADA: Her hedefe farklı renk
+                            x=alt.X('Target', title='Target Point', sort='-y'),
+                            y=alt.Y('Quantity', title='Total Quantity'),
+                            color=alt.Color('Target', legend=None),
                             tooltip=['Target', 'Quantity']
                         ).properties(height=300)
                         
